@@ -1,4 +1,11 @@
 # ANSIBLE PLAYBOOK TO PROVISION EC2 IN AWS USING JENKINS
 
-# Blog
-https://mrcloudbook.hashnode.dev/automate-ec2-provisioning-in-aws-using-jenkins-and-ansible-playbook
+# steps
+cd Jenkins_Ec2
+terraform init
+terraform validate
+terraform plan
+terraform apply --auto-approve
+
+go to the ec2 instance --> cd /var/log
+cat user-data.log
