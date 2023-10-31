@@ -9,5 +9,5 @@ sudo apt install git -y
 mkdir Ansible && cd Ansible
 pwd
 git https://github.com/Velocity9919/Terraform_Ansible_project_1.git
-cd ANSIBLE
+cd https://github.com/Velocity9919/Terraform_Ansible_project_1.git
 ansible-playbook -i localhost Jenkins.yml
