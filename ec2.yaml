@@ -24,14 +24,14 @@
     ansible_python_interpreter: /usr/bin/python3.10
     keypair: Mumbai
     instance_type: t2.micro
-    image_id: ami-0f5ee92e2d63afc18
+    image_id: ami-0287a05f0ef0e9d9a
     wait: yes
     group: webserver
     count: 1
     region: ap-south-1
-    security_group: ec2-security-group
+    security_group: Jenkins_sg
     tag_name:
-      Name: Aj-ec2   
+      Name: Jenkins_Server 
 
   tasks:
     - name: Create a security group
@@ -84,5 +84,5 @@
           sudo apt install docker.io -y
           sudo systemctl start docker
           sudo systemctl enable docker
-          sudo docker run -d --name 2048 -p 3000:3000 sevenajay/2048:latest
+          sudo docker run -d --name 2048 -p 3000:3000 nareshbabu1991/2048:latest
       register: ec2
